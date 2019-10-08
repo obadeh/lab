@@ -1,34 +1,35 @@
 'use strict';
 
-var score=0;
+var score = 0;
 
 
 var name = prompt('what\'s your name?');
-alert('hello ' + name + ' welcome to my site')
+alert('hello ' + name + ' welcome to my site, i will ask you some questions about me')
+alert('lets go..')
 var lab = [
    [
-       'do i like programming?',
+       name+ ' do you think i like programming?',
        'yes i realy do'+' >> your score is ' ,
        'you are wrong'
    ],
    [
-       'do i like moveis?',
+       'do you think i like moveis?',
        'yes i like moveis'+' >> your score is ',
        'you are wrong'
    ],
    [
-       'do i like engineering?',
-       'right, actually iam an engineer'+' >> your score is ',
+       'do you think i like cofee?',
+       'sure, i love cofee'+' >> your score is ',
        'you are wrong'
    ],
    [
        'do you think i like cars?',
-       'right,I like cars'+' >> your score is ',
+       'right, I like cars'+' >> your score is ',
        'you are wrong'
    ],
    [
        'do you think i am happy in programing this site?',
-       'right,I am very happy in programming ' + name+' >> your score is ' ,
+       'absolutely, I am very happy in programming  >> your score is ' ,
        'you are wrong'
    ],
 ];
@@ -187,26 +188,51 @@ for (var i = 0; i < lab.length; i++) {
 
 
 
-// var q6 = prompt('guss, how old am I??')
-// var myAge = 24;
-// var i;
 
-// for (i = 0; (i < 3); i++) {
-//     if (q6 > myAge) {
-//         console.log(q6)
-//         alert('too high');
 
-//     } else if (q6 < myAge) {
-//         alert('too low');
-//     }
-//     else {
-//         alert('that\'s right i am 24 years old');
-//         break;
-//     }
 
-//     q6 = prompt('guss, how old am I??');
 
-// }
+var q6 = prompt('guss, how old am I??')
+var myAge = 24;
+var i;
+
+for (i = 0; (i < 3); i++) {
+    if (40 > q6 && q6 > 24) {
+        console.log(q6)
+        alert('I am younger than ' + q6);
+
+    } else if (18 < q6 && q6 < 24) {
+        alert('I am older than ' + q6);
+    }
+
+    else if (100 > q6 && q6 > 40) {
+        alert(name + ' I am not that old!!');
+    }
+    else if (0 < q6 && q6 < 18) {
+        alert(name + ' I am not that young!!');
+
+    }
+    else if (q6 == myAge) {
+        score++;
+        alert('that\'s right i am 24 years old >> your score is ' + score);
+        break;
+    }
+
+    else if (i == 2) {
+        alert('I am 24 years old');
+        break;
+    }
+    q6 = prompt('guss, how old am I??');
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -217,20 +243,20 @@ var q7= prompt('guss one of my favorit colors')
 var j;
 q7=q7.toLowerCase()
 for(j=0 ;j<5 ;j++){
-    if(q7=='red'){
+
+
+    if (q7=='blue'){
         score++
-        alert('right red is one of my favorit'+'your score is ' + score)
-    }
-    else if(q7=='blue'){
-        score++
-        alert('right blue is one of my favorit'+'your score is ' + score)
+        alert('right blue is one of my favorit color '+'your score is ' + score)
+        break;
     }
     else if(q7=='black'){
         score++
-       alert ('right black is one of my favorit'+'your score is ' + score)
+       alert ('right black is one of my favorit color '+'your score is ' + score)
+       break;
     }
     q7= prompt('guss one of my favorit colors')
 }
-alert('the correct answer is : red, blue, black')
+alert('the correct answer is : blue, black')
 
 alert('your final score is  >>> ' + score+ '/7')
