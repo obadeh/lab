@@ -33,6 +33,7 @@ var lab = [
        'you are wrong' + score++
    ],
 ];
+function aboutme (){
 for (var i = 0; i < lab.length; i++) {
    var currentQuestion = lab[i]; // array of 3 items [prompt, positive, negative]
    var promptIndex = 0;
@@ -59,7 +60,8 @@ for (var i = 0; i < lab.length; i++) {
        default:
            alert(' Wrong Answer!');
    }
-}
+}}
+aboutme();
 
 
 
@@ -193,7 +195,7 @@ for (var i = 0; i < lab.length; i++) {
 
 
 
-
+function myAge(){
 var q6 = prompt('guss, how old am I??')
 var myAge = 24;
 var i;
@@ -225,7 +227,8 @@ for (i = 0; (i < 3); i++) {
         break;
     }
     q6 = prompt('guss, how old am I??');
-}
+}}
+myAge();
 
 
 
@@ -240,7 +243,7 @@ for (i = 0; (i < 3); i++) {
 
 
 
-
+function guessingGame(){
 var q7= prompt('guss one of my favorit colors')
 var j;
 q7=q7.toLowerCase()
@@ -259,6 +262,7 @@ for(j=0 ;j<5 ;j++){
     }
     q7= prompt('guss one of my favorit colors')
 }
-alert('the correct answer is : blue, black')
+alert('the correct answer is : blue, black')}
+guessingGame();
 
 alert('your final score is  >>> ' + score+ '/7')
