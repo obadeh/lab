@@ -9,28 +9,28 @@ alert('lets go..')
 var lab = [
    [
        name+ ' do you think i like programming?',
-       'yes i realy do'+' >> your score is ' ,
-       'you are wrong'
+       'yes i realy do' + score++,
+       'you are wrong' 
    ],
    [
        'do you think i like moveis?',
-       'yes i like moveis'+' >> your score is ',
-       'you are wrong'
+       'yes i like moveis' + score++,
+       'you are wrong' 
    ],
    [
-       'do you think i like cofee?',
-       'sure, i love cofee'+' >> your score is ',
-       'you are wrong'
+       'do you think i like anime?',
+       'wrong, actully i hate anime',
+       'you are right i hate anime' + score++
    ],
    [
        'do you think i like cars?',
-       'right, I like cars'+' >> your score is ',
-       'you are wrong'
+       'right, I like cars',
+       'you are wrong' + score++
    ],
    [
        'do you think i am happy in programing this site?',
        'absolutely, I am very happy in programming  >> your score is ' ,
-       'you are wrong'
+       'you are wrong' + score++
    ],
 ];
 for (var i = 0; i < lab.length; i++) {
@@ -43,11 +43,13 @@ for (var i = 0; i < lab.length; i++) {
    userResponse = userResponse.toUpperCase();
    var currentPositiveReply = currentQuestion[positiveIndex];
    var currentNegativeReply = currentQuestion[negativeIndex];
+
+   
    switch (userResponse) {
        case 'YES':
        case 'Y':
-           score++ ;
-           var text = currentPositiveReply + score;
+          // score++ ;
+           var text = currentPositiveReply //+ score;
            alert(text);
            break;
        case 'NO':
